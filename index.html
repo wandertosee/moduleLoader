@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Square Spin</title>
+	<title>Test</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	<link href='http://fonts.googleapis.com/css?family=Lato:900' rel='stylesheet' type='text/css'>
 	<!-- <link rel="stylesheet" type="text/css" href="css/hover.css"> -->
@@ -10,26 +10,7 @@
 </head>
 <body>
 	<div id="mainContent" class="">
-	</div>
-	<div class="smaller">	
-		<a href="#hash">Router Check</a> / <a href="#freedom">Router Check 2</a>
-	</div>
-	<div>
-  <label class="celsius-wrap"><input id="celsius" value="0" type="number" step="0">°C</label>
-  <span class="arrows">⇄</span>
-  <!-- invalid entry here prevents JS from running! novalidate prevents validation -->
-  <label class="fahrenheit-wrap"><input id="fahrenheit" value="0" type="number" step="0" pattern="[0-9]+([\.|,][0-9]+)?">°F</label> : <span type="number" class="" id="total"></span>
-	</div>
-	<script type="text/html" id="hash" controller>
-		<div id="hash">
-			<div>{{varia}}</div>
-			<div>{{varia}}</div>
-		</div>
-	</script>	
-	<canvas id='canvas'></canvas>
-	<div class="lightbox hidden" id="lightbox"></div>
-	<!-- <script type="text/javascript" src="js/fastclick.js"></script> -->
-	<!-- if( (navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)) ) {} -->
+	<span class="arrows">⇄</span>
 	<script type="text/javascript" src="js/CKM.js"></script>
 	<script type="text/javascript">
 		// PASS LOCATION OF JS FILES
@@ -37,80 +18,9 @@
 		// AND PRIMARY JAVASCRIPT FILE
 		CKM.minifiedExt = "";
 		CKM.minifiedPath = "";
-		CKM.init("/js/", ["CKMUtils", "CKMURL", "CKMEvents", "CKMHtml", "CKMInt",  "CKMStr", "CKMCSS", "CKMFlickr", "CKMSoundCloud", "CKMBandCamp", "CKMBinder", "CKMRouter"], "main");
+		CKM.init("/js/", ["CKMUtils", "CKMURL", "CKMInt",  "CKMStr"], "main");
 	</script>
-	<!--<script src="http://connect.soundcloud.com/sdk.js"> var SC={};</script>-->
+	</div>
 </body>
 
 </html>
-
-<script>
-/*
-	var url = 'Canon.mp3';
-
-	var source;
-	var context = new AudioContext() || new WebkitAudioContext();
-	var analyser = context.createAnalyser();
-	var canvas = document.getElementById('canvas');
-	var canvasContext=canvas.getContext('2d');
-
-	function playSound(buffer) {
-	    source = context.createBufferSource();
-	    //var gainNode = context.createGainNode();
-	    //Now we create an analizer
-
-	    source.buffer = buffer;
-	    // source.connect(gainNode);
-	    source.connect(analyser);
-	    analyser.connect(context.destination);
-	    //    gainNode.connect(context.destination);
-	    //    gainNode.gain.value=2;
-	    //source.noteOn(0);
-	}
-
-	function init(url) {
-
-	    var request = new XMLHttpRequest();
-	    request.open('GET', url, true);
-	    request.setRequestHeader('X-Custom-Header', 'value');
-	    request.setRequestHeader('Access-Control-Allow-Origin', 'crt.local:5757');
-	    request.responseType = 'arraybuffer';
-	    request.onload = function() {
-	        context.decodeAudioData(request.response, function(buffer) {
-	            //let's play it then
-	            playSound(buffer);
-	        });
-	    };
-	    request.send();
-	}
-
-	function draw(){
-	    window.requestAnimationFrame(draw) || window.WebkitRequestAnimationFrame(draw);
-	    render();
-	}
-
-	var separator=2;
-	var height=canvas.height=500;
-	var width=canvas.width=500;
-	var spacer=2;
-
-	function render(){
-	    //Get the Sound data
-	    var freqByteData = new Uint8Array(analyser.frequencyBinCount);
-	    analyser.getByteFrequencyData(freqByteData);     //analyser.getByteTimeDomainData(freqByteData);
-	    //we Clear the Canvas
-	    canvasContext.beginPath();
-	    canvasContext.clearRect(0, 0, width, height);
-	    canvasContext.fillStyle = '#000000';
-	    canvasContext.lineCap = 'round';
-	    canvasContext.fill();
-	    for(var i=0;i<analyser.frequencyBinCount;i++){
-	        canvasContext.fillRect(i*2,height,1,-freqByteData[i]);
-	    }
-	    
-	}
-	init(url);
-	draw();
-	*/
-
-</script>
